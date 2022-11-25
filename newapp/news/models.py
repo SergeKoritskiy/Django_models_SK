@@ -62,8 +62,8 @@ class Post(models.Model):
             return f'{self.text[:124]}...'
         return f'{self.text}'
 
-    def __str__(self):
-        return f'id={self.pk} name={self.text}'
+    # def __str__(self):
+    #     return f'Название={self.title.title()}:Текст={self.text}:Дата публикации={self.dateCreation}: '
 
 
 class PostCategory(models.Model):
@@ -88,4 +88,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'id={self.pk} name={self.text}'
-  
